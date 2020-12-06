@@ -8,14 +8,13 @@ SIM = gtkwave
 WORKDIR = debug
 QUIET = @
 
-ARCHNAME?= tb_uart
+ARCHNAME?= tb_uart  ## didn't added
 STOPTIME?= 10ms
 
 # analyze these two first since some other circuits depend on these
 VHDL_SOURCES += uart_rx.vhd
 VHDL_SOURCES += uart_tx.vhd
 VHDL_SOURCES += uart_loopback.vhd
-#VHDL_SOURCES += rtl/addsub4.vhd
 # add rest of the files in rtl directory for analyzing
 #VHDL_SOURCES += $(wildcard rtl/*.vhd)
 #SRCS += $(wildcard impl/*.vhd)
